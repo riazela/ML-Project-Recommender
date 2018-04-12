@@ -39,7 +39,6 @@ for train_index, test_index in kfold.split(X):
     regressor.fit(X_train, y_train)
     f_test = regressor.predict(X_test)
     err = mean_absolute_error(y_test, f_test)
-    print(err)
     total_err += err
 
 total_err /= number_of_folds
