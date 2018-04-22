@@ -69,10 +69,11 @@ class ItemAverageRegressor(BaseEstimator, RegressorMixin):
 
 
 # performing kfold for user average regressor
-number_of_folds = 5
+number_of_folds = 10
 (X, y) = load_data()
-kfold = KFold(number_of_folds, True, random_state=123)
+kfold = KFold(10000, True, random_state=123)
 total_err = 0
+counter = 0
 for train_index, test_index in kfold.split(X):
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
@@ -81,6 +82,9 @@ for train_index, test_index in kfold.split(X):
     f_test = regressor.predict(X_test)
     err = mean_absolute_error(y_test, f_test)
     total_err += err
+    counter += 1
+    if (counter == number_of_folds):
+        break
     
 
 total_err /= number_of_folds
@@ -90,10 +94,11 @@ print(total_err)
 
 
 
-number_of_folds = 5
+number_of_folds = 10
 (X, y) = load_data()
-kfold = KFold(number_of_folds, True, random_state=123)
+kfold = KFold(10000, True, random_state=123)
 total_err = 0
+counter = 0
 for train_index, test_index in kfold.split(X):
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
@@ -102,7 +107,9 @@ for train_index, test_index in kfold.split(X):
     f_test = regressor.predict(X_test)
     err = mean_absolute_error(y_test, f_test)
     total_err += err
-    
+    counter += 1
+    if (counter == number_of_folds):
+        break
 
 total_err /= number_of_folds
 print('total MAE of item average predictor')

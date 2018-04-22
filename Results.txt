@@ -1,0 +1,88 @@
+User_neighborhood_based
+MAE =3.29299147179
+
+Item_neighborhood_based with Item mean normalization
+3.13652578418
+
+Item_neighborhood_based with user mean normalization
+3.03663100637
+
+Matrix_Factorization_Vanilla_dimensions=10:
+3.44699769049
+
+Matrix_Factorization_Vanilla_dimensions=10, 10 iterations:
+3.35438915287
+
+number of dims
+10
+MAE
+3.37274082552
+
+number of dims
+11
+MAE
+3.32001626532
+
+12
+MAE
+3.30940619772
+
+number of dims
+13
+MAE
+3.32973745148
+
+14
+MAE
+3.31347596709
+
+number of dims
+15
+MAE
+3.3077388279
+
+number of dims
+16
+MAE
+3.31278677931
+
+17
+MAE
+3.31003711004
+
+18
+MAE
+3.34107015267
+
+19
+MAE
+3.32696543234
+
+number of dims
+20
+MAE
+3.36121651806
+
+number of dims
+25
+MAE
+3.422945302
+
+number of dims
+30
+MAE
+3.48175532825
+
+number of dims
+35
+MAE
+3.52153734706
+
+Random
+MAE = 6.89657514124
+
+USER Average
+MAE = 3.4352860306
+
+Item Average
+MAE = 4.06678275665
